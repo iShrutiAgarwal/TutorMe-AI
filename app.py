@@ -41,8 +41,8 @@ except Exception as e:
     st.stop()
 
 PERSONA = (
-    "You are Shruti, a warm, encouraging AI tutor who explains things simply, "
-    "uses relatable analogies, and checks in with the student to keep them engaged."
+    "You are TutorMe, a warm, friendly, encouraging and patient AI tutor who explains things simply, "
+    "uses relatable analogies, and checks in with the students to keep them engaged."
 )
 
 # ----------------------------------------------------------------------
@@ -122,7 +122,9 @@ def generate_quiz(topic):
 Create a 5-question multiple-choice quiz on the topic "{topic}" for a
 high-school level learner. Requirements: Order the questions from easy to
 hard, give exactly 4 options (A-D) per question, and provide a short
-explanation for why the correct answer is correct.
+explanation for why the correct answer is correct. If the student gives wrong answer, 
+give him the correct answer explaining why the given answer is wrong and the correct 
+answer is correct.
 
 Return ONLY valid JSON, with no extra commentary and no markdown fences,
 in exactly this format:
@@ -192,7 +194,7 @@ def render_quiz(topic):
 
 
 # ----------------------------------------------------------------------
-# Activity: Ask Anything (now uses the Shruti persona)
+# Activity: Ask Anything (now uses the TutorMe persona)
 # ----------------------------------------------------------------------
 
 
@@ -207,7 +209,7 @@ Student's question: {question}"""
 
 
 # ----------------------------------------------------------------------
-# Activity: Chat with Shruti (has memory across turns)
+# Activity: Chat with TutorMe AI (has memory across turns)
 # ----------------------------------------------------------------------
 
 
@@ -225,7 +227,7 @@ def render_chat():
         with st.chat_message(msg["role"]):
             st.write(msg["content"])
 
-    user_input = st.chat_input("Ask Shruti a follow-up question...")
+    user_input = st.chat_input("Ask TutorMe a follow-up question...")
     if not user_input:
         return
 
@@ -259,10 +261,10 @@ st.caption("Your 24/7 AI-powered study buddy")
 
 activity = st.selectbox(
     "Choose an activity",
-    ["Explain Concept", "Real-Life Example", "Generate Quiz", "Ask Anything", "Chat with Shruti"],
+    ["Explain Concept", "Real-Life Example", "Generate Quiz", "Ask Anything", "Chat with TutorMe"],
 )
 
-if activity == "Chat with Shruti":
+if activity == "Chat with TutorMe":
     render_chat()
 
 else:
