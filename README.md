@@ -8,15 +8,15 @@ An AI-powered tutoring platform providing personalized, 24/7 educational support
 
 ## Overview
 
-TutorMe AI is a Streamlit web app built on Google's Gemini API. It acts as "Shruti," a friendly AI tutor who can explain concepts, give real-life examples, generate and grade interactive quizzes, answer open questions, and hold a follow-up conversation with memory.
+TutorMe AI is a Streamlit web app built on Google's Gemini API. It acts as "TutorMe," a friendly AI tutor who can explain concepts, give real-life examples, generate and grade interactive quizzes, answer open questions, and hold a follow-up conversation with memory.
 
 ## Features
 
 - **Explain Concept** — a beginner-friendly explanation of any topic, with an analogy and a check-in question
 - **Real-Life Example** — a concrete, step-by-step real-world example of the topic
 - **Generate Quiz** — a 5-question multiple-choice quiz, generated on the fly, auto-graded in the app, with an explanation for every answer
-- **Ask Anything** — open-ended Q&A with the Shruti persona
-- **Chat with Shruti** — a multi-turn conversation that remembers earlier messages in the session
+- **Ask Anything** — open-ended Q&A with the TutorMe persona
+- **Chat with TutorMe** — a multi-turn conversation that remembers earlier messages in the session
 
 ## Tech Stack
 
@@ -82,21 +82,9 @@ tutorme-ai/
 
 - Single shared API key — heavy concurrent use may hit Gemini's free-tier rate limits.
 - No persistent storage yet — chat history and quiz results reset when the session ends.
-- Gemini may occasionally produce incorrect information; answers in **Explain Concept**, **Ask Anything**, and **Chat with Shruti** are not fact-checked against a source document.
+- Gemini may occasionally produce incorrect information; answers in **Explain Concept**, **Ask Anything**, and **Chat with TutorMe** are not fact-checked against a source document.
 
-## Roadmap
-
-- [ ] RAG support — upload your own notes/PDF so answers are grounded in your material, with citations
-- [ ] Answer evaluator — submit a written answer and get rubric-based feedback
-- [ ] Adaptive difficulty and per-topic mastery tracking
-- [ ] Spaced-repetition flashcards
-- [ ] Progress dashboard
-- [ ] Persistent storage (database-backed) for progress across sessions
 
 ## Acknowledgements
 
 Built using the [Gemini API](https://ai.google.dev/) and [Streamlit](https://streamlit.io).
-
-## License
-
-Add a license of your choice (e.g., MIT) here.
